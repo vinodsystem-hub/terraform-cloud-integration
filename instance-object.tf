@@ -1,4 +1,4 @@
-variable "instance" {
+ variable "instance" {
   description = "ec2 instance to be created"
   type = map(object({
     instance_type     = string
@@ -7,17 +7,17 @@ variable "instance" {
   }))
   default = {
     web1 = {
-      instance_type     = "t3.micro"
+      instance_type     = "t3.large"
       availability_zone = "us-east-1a"
       subnet_key        = "subnet1"
     }
     web2 = {
-      instance_type     = "t3.small"
+      instance_type     = "t3.large"
       availability_zone = "us-east-1b"
       subnet_key        = "subnet2"
     }
     web3 = {
-      instance_type     = "t3.medium"
+      instance_type     = "t3.large"
       availability_zone = "us-east-1c"
       subnet_key        = "subnet3"
     }
